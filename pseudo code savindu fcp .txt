@@ -1,0 +1,381 @@
+Begin
+  
+function login()
+ string U,P,X,Y,av,an,vd,au;
+   X="user";
+   Y="pass99";
+Print” TOUR MATE COMPANY ”
+Print "PLEASE LOGING TO YOUR  CAB SERVICE SYSTEM ”
+print"plese input your user name"
+input U
+print "please input your password"
+input p
+if((U==X) && (P==Y)) then
+   print"loging successfull your system"
+ else   
+   print"loging failed please input valid details"
+ end if.  
+ end function
+
+function menu()
+  print"	MENU"
+  input p;  
+  Switch (P) 
+      CASE (1){ go to the view menu function} 
+      CASE (2){go to the edit menu function } 
+      CASE (3){go to the payment function} 
+      CASE (4){go to the registration function} 
+      CASE (5){go tho the login function}
+      CASE (6){go to the how to use software function}
+      CASE (7){go to the exit function }
+      default { go to the menu function}
+End switch  
+end  function   
+
+
+function payment()
+Int       nd,x;
+float     nk,nh,kp,hp,dp,tp ,p ,dis;
+string    pp,d,m,ty;
+print" 1) Enter pickup place: "
+input pp
+print" 2) Enter drop place: "  
+input d
+print" 3) how far traveled you (km): "  
+input nk
+print" 4) Enter traveled number of Hours: "  
+input nh  	
+print" 5) Enter Number of Days: "  
+input nd
+print" 6) Enter Vehical type: "  
+input ty  	
+print" 7) Enter charge per km: "  
+input kp  	
+print" 8) Enter charge per Hour: "  
+input hp  	
+print" 9) Enter charge per Day: "  
+input dp
+print" 10) Enter payment method(card or cash): "
+ input m
+tp=((nk*kp)+(nh*hp)+(nd*dp))
+dis=(tp*0.02)
+p=(tp*0.98)
+print"  INVOICE  "
+switch(x)
+        case (1){ go to payment function }
+        case (2){go to menu function}
+end switch        
+end function
+
+
+function registration()
+ string w;
+ print" REGISTRATION FORM " 
+ Open New File “registration.txt” 
+ print"1-ENTER YOUR FIRST NAME- "  
+  input w
+ print"2-ENTER YOUR LAST NAME- "  
+  input w
+ print" 3-ENTER YOUR ADDRESS-"  
+  input w
+ print"4-ENTER YOUR TELEPHONE NUMBER- "  
+  input w
+ print" 5-ENTER YOUR EMAIL ADDRESS-"  
+  input w
+ print"6-ENTER YOUR PASSWORD- "  
+  input w
+  close text file
+ print" REGISTRATION SUCCESFULL ! "  
+ go to menu function
+end function
+
+function add vehicle details()  
+ string write
+ Open New File “vehicle.txt”
+ print"ADD VEHICLE DETAILS  "  
+ print"1-Input vehicle TYPE "  
+  input write
+ print"2-Input vehicle NAME "  
+  input write
+ print" Input vehicle REGISTRATION DATE"  
+  input write
+ print"4-Input vehicle AC TYPE "  
+  input write
+ print"5-Input vehicle COST"  
+  input write
+ print"6-Input vehicle INSUARANCE TYPE "  
+  input write
+ print" 7-Input vehicle INSUARANCE EXPIER DATE "  
+  input write
+ print"8-Input vehicle FUEL TYPE"  
+  input write
+ print" 9-Input vehicle TANK CAPACITY "  
+  input write
+ print"10-Input vehicle ENGIN NUMBER"  
+  input write
+ print"11-Input vehicle CHASSIS NUMBER"  
+  input write
+  close text file
+ print" SUCCESFULL ! " 
+ switch(x)
+        case (1){ go to vehicle details function }
+        case (2){go to update details function}
+end switch 
+end function
+
+function add driver details()
+string write
+print" ADD DRIVER DETAILS "
+Open New File “driver.txt”  
+print" 1-Input FULL NAME "  
+input write
+print"2-Input DATE OF BIRTH "  
+input write
+print"3-Input ADDRESS"  
+input write
+print”4-Input TELEPHONE NUMBER "  
+input write
+print"5-Input EMAIL ADDRESS"  
+input write
+print"6-Input JOB DESIGNATION "  
+input write
+print"7-Input JOB TO JOIN DATE "  
+input write
+print"8-Input JOB SALARY"  
+input write
+close text file
+print" SUCCESFULL ! "  
+switch(x)
+        case (1){ go to add driver details function }
+        case (2){go to update details  function}
+end switch
+end function
+
+function add bookin details()
+string write
+print" ADD BOOKING DETAILS "  
+Open New File “booking.txt”
+print" 1-Input CUSTOMER NAME"  
+input write
+print"2-Input CONTACT NUM "  
+input write
+print"3-Input CUSTOMER EMAIL"  
+input write
+print” 4-Input VEHICLE TYPE "  
+input write
+print"5-Input VEHICLE NAME"  
+input write
+print"6-Input PICKUP ADDRESS "  
+input write
+print"7-Input DROP ADDRESS "  
+input write
+print"8-Input DATE"  
+input write
+close text file
+print" SUCCESFULL ! "  
+switch(x)
+        case (1){ go to add bookin  function }
+        case (2){go to update details function}
+end switch
+end function
+
+function add company details()
+ string write;
+ print"  ADD COMPANY DETAILS  "  
+ print"WRITE HERE COMPANY DETAILS " 
+ Open New File “addcompanydetails.txt”
+ input w
+close text file
+switch(x)
+        case (1){ go to add company details function }
+        case (2){go to update details function}
+end switch
+end function
+
+
+function view vehicle details function()
+print" VIEW  VEHICLE  DETAILS"  
+String line;
+Open  File “vehicle.txt”
+ if (myfile.is_open()) then
+   while ( getline (myfile,line) ) then
+      PRINT<< line <<'/n’;
+   end while
+Else 
+     print"CAN NOT OPEN FILE"  
+end if
+end function
+
+function view driver details()
+print" VIEW  DRIVERS  DETAILS"  
+String line;
+ifstream myfile ("emp.txt");
+ if (myfile.is_open()) then
+   while ( getline (myfile,line) ) then
+      PRINT<< line <<'/n’;
+   end while
+Else 
+     print"CAN NOT OPEN FILE"  
+end if
+end function
+
+function how to use this software()
+print"HOW TO USE THIS SOFTWARE"  
+String line;
+ifstream myfile ("howtousethissoftware.txt");
+ if (myfile.is_open()) then
+   while ( getline (myfile,line) ) then
+      PRINT<< line <<'/n’;
+   end while
+Else 
+     print"CAN NOT OPEN FILE"  
+end if
+end function
+
+function view bookin details function()
+print" VIEW  BOOKING  DETAILS"  
+String line;
+ifstream myfile ("bookin.txt");
+ if (myfile.is_open()) then
+   while ( getline (myfile,line) ) then
+      PRINT<< line <<'/n’;
+   end while
+Else 
+     print"CAN NOT OPEN FILE"  
+end if
+end function
+
+function view about company details()
+print" VIEW  ABOUT COMPANY  DETAILS"  
+String line;
+ifstream myfile ("about company.txt");
+ if (myfile.is_open()) then
+   while ( getline (myfile,line) ) then
+      PRINT<< line <<'/n’;
+   end while
+Else 
+     print"CAN NOT OPEN FILE"  
+end if
+ens function
+
+
+function edit detail()
+print"	EDIT DETAILS"
+input g  
+Switch (g) 
+      CASE (1){go to update details function }
+      CASE (2){go to clear details function }
+      CASE (3){go to log in function}
+      CASE (4){go to menu function}
+      case (5){go to the exit function}
+      default {go to the edit details function}
+End switch   
+end function
+
+function view details function()
+print"	VieW DETAILS"
+input g  
+Switch (g) 
+      CASE (1){go to vehicle details function}
+      CASE (2){go to driver details function}
+      CASE (3){go to bookin details function}
+      CASE (4){go to about company details function}
+      CASE (5){go to login function}
+      CASE (6){go to menu function}
+      case (7){go to the exit function}
+      default {go to the view details function}
+End switch     
+end function
+
+function update details() 
+print"	UPdATE DETAILS"
+input I  
+If(l=1) then 
+{go to the add vehicle details function}
+Else If(l=2) then 
+{go to the add driver details function}
+Else If(l=3) then 
+{go to the add bookin  function}
+Else If(l=4) then 
+{go to the add about company details function}
+Else If(l=5) then 
+{go to the login function}
+else If(l=6) then 
+{go to the edit function}
+else If(l=7) then 
+{go to the exit function }
+else 
+ { go to the update details function}
+End if    
+end function
+
+function clear details()
+print"	CLEAR DETAILS"
+input N 
+If(n=1) then {go to the clear vehicle details function}
+Else If(n=2) then {go to the clear driver details function}
+Else If(n=3) then {go to the clear bookin details function}
+Else If(n=4) then {go to the clear about company details function}
+Else If(n=5) then {go to the login function}
+Else If(n=6) then {go to the edit details function}
+Else If(n=7) then {go to the exit function}
+else {go to the clear details function}
+End if    
+end function
+
+function clear vehicle details()
+Open  File “vehicle.txt”
+print"  SUCCUSSFULL CLEARED ALL DETAILS"
+close text file
+go to  clear details function
+end function
+
+
+function clear driver details()
+Open File “driver.txt”
+print"  SUCCUSSFULL LEARED ALL DETAILS"
+close text file
+go to the clear details function
+end function
+
+function clear bookin details()
+Open File “bookin.txt”
+print"  SUCCUSSFULL LEARED ALL DETAILS"
+close text file
+go to the clear details function
+end function
+
+function clear about company details()
+Open File “aboutcompany.txt”
+print"  SUCCUSSFULL CLEARED ALL DETAILS"
+close text file
+go to the clear details function
+end function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
