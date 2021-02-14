@@ -1,0 +1,11 @@
+******BOOKING DETAILS****
+...............
+1-CUSTOMER NAME--fgdg
+2-CONTACT NUM--dgd
+3-EMAIL--gd
+4-VEHICAL TYPE--dg
+5-VEHICLE NAME--dg
+6-PICUP ADDRESS--dg
+7-DROP ADDRESS--dg
+8-DATE--gd
+  
