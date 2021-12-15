@@ -1,0 +1,11 @@
+**********
+...............
+1-NAME--SAVINDU_PASINTHA
+2-ADDRESS--No.89,Benthota,Aluthgama
+3-DATE OF BIRTH--1988.04.25
+4-TELEPHON NUM--0770000000
+5-EMAIL--mohomedkalif@gmail.com
+6-JOB DESIGNATION--driver
+7-JOB TO JOIN DATE--2020.03.16
+8-JOB SALARY--28373Rs
+  

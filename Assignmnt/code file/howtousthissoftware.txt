@@ -1,0 +1,24 @@
+first input username and password.
+
+
+**After you can accees to main menu
+Enter number =1 after, Go to the VIEW menu and show the VIEW menu items.
+
+Enter number =2 after, Go to the EDIT menu and show the EDIT menu items.
+
+Enter number =3 after, Go to the PAYMENY BILLING menu and show the 
+PAYMENT BILL items.
+
+Enter number =4 after, Go to the REGISTRATION TO SYSTEM and show 
+the REGISTRATION items.
+
+Enter number =5 after, Go to the LOGGIN and show the LOGGIN MENU.
+
+Enter number =6 after, show HOE TO USE SOFTWARE DOCUMENT.
+
+Enter number =7 after, CLOSE THE application.
+
+Enter number =other numbers as a Num 9 after, show the MAIN MENU items.
+
+**you can easy to  run the programm .
+
